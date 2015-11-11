@@ -26,7 +26,7 @@
 
     dt {
       color: #244;
-      font-weight: hold;
+      font-weight: bold;
       font-size: larger;
     }
 
@@ -38,14 +38,14 @@
   .list_actions {
     font-size: x-small;
     text-align: right;
-    padding-left: lem;
+    padding-left: 1em;
   }
 
   .list_line_even {
-    background: #e0f8f8;
+    background: #00FFFF;
   }
 
   .list_line_odd {
-    background: #f8b0f8;
+    background: #FFFF66;
   }
 }
