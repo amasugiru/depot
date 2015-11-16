@@ -4,6 +4,8 @@
 
 <h1>Pragmaticカタログ</h1>
 
+<p><%= "#{@counter}回目の訪問です。" %></p>
+
 <% @products.each do |product| %>
 <div class="entry">
  <%= image_tag(product.image_url) %>
