@@ -5,6 +5,7 @@ class LineItemsController < ApplicationController
   # GET /line_items.json
   def index
     @line_items = LineItem.all
+    @line_item = LineItem.new
   end
 
   # GET /line_items/1
@@ -58,9 +59,10 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy
+    cart = @line_item.cart
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to line_items_url, notice: 'Line item was successfully destroyed.' }
+      format.html { redirect_to cart_url(cart), notice: 'アイテムを削除しました' }
       format.json { head :no_content }
     end
   end
